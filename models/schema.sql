@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS voicedocs;
+CREATE DATABASE voicedocs;
