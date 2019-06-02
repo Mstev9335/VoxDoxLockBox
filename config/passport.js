@@ -11,13 +11,13 @@ passport.use(new LocalStrategy(
     {
         usernameField: "email"
     },
-    function(email, password, done) {
+    function (email, password, done) {
         // run this at auth attempt
         db.User.findOne({
             where: {
                 email: email
             }
-        }).then(function(dbUser) {
+        }).then(function (dbUser) {
             if (!dbUser) {
                 return done(null, false, {
                     message: "User Not Found..."
@@ -36,11 +36,11 @@ passport.use(new LocalStrategy(
 
 // Sequelize has to serialize and deserialize the user 
 // boilerplate
-passport.serializeUser(function(user, cb) {
+passport.serializeUser(function (user, cb) {
     cb(null, user);
 });
 //
-passport.deserializeUser(function(obj, cb) {
+passport.deserializeUser(function (obj, cb) {
     cb(null, obj);
 });
 

@@ -99,10 +99,7 @@
         </g>
       </svg>
     </div>
-    {{!-- <div class="search">
-      <input type="search" id="search" name="q" placeholder="project search" label="Search">
-      <button><i class="fas fa-search"></i></button>
-    </div> --}}
+
     <div class="content">
       <div class="uploadForm">
         <form action="/api/projects" enctype="multipart/form-data" method="POST">
@@ -144,35 +141,13 @@
           <button class="btn-select" id="btnUrl" value={{url}} type="submit">Select</button>
         </ul>
 
-      {{/each}}
+        {{/each}}
 
-      {{!-- display db data end --}}
+        {{!-- display db data end --}}
 
 
 
-      {{!-- <div class="contentAuth">
 
-        <form class="signUp">
-          <h4>Sign Up</h4>
-          <label for="username">user</label>
-          <input type="text" name="username" id="signUpUser">
-          <br>
-          <label for="password">pass</label>
-          <input type="password" name="password" id="signUpPass">
-          <button class="signUp" id="signUpBtn">sign up</button>
-        </form>
-
-        <form class="signIn">
-          <h4>Sign In</h4>
-          <label for="username">user</label>
-          <input type="text" name="username" id="signInUser">
-          <br>
-          <label for="password">pass</label>
-          <input type="password" name="password" id="signInPass">
-          <button class="signIn" id="signInBtn">sign in</button>
-        </form>
-
-      </div> --}}
       </div>
     </div>
     <div>

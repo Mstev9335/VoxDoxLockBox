@@ -28,18 +28,10 @@ module.exports = function (app) {
         });
     });
 
-    // get list from database of objects
-    // ----------------------------
-    // Project.findAll({attributes: ['title']}).on('success', function (projects) {
-    //     console.log(projects);
-    //   });
+
 
     app.get("/index", function (req, res) {
-        // console.log("page load");
-        //    db.Project.findAll({attributes: ['url']}).then(function (projects) {
-        //     console.log(projects);
 
-        //   });
     });
 
     app.get("/", function (req, res) {
@@ -52,31 +44,17 @@ module.exports = function (app) {
             for (var i = 0; i < projects.length; i++) {
                 // console.log(projects[i]['url']);
                 var url = projects[i]['url'];
-                
-                
+
+
             }
-            // console.log(files);
+
 
             res.render("index", hbsObject);
 
         });
     });
-    // -------------------
 
 
-    // app.get("/api/projects/:title/:oName", function (req, res) {
-    //     const s3 = new aws.S3();
-
-    //     db.Project.findOne({
-    //         where: {
-    //             title: req.params.title,
-    //             oName: req.params.oName,
-    //         },
-    //         include: [db.User]
-    //     }).then(function (dbProject) {
-    //         res.json(dbProject);
-    //     });
-    // });
 
     app.post("/api/projects", function (req, res) {
         const s3 = new aws.S3();
@@ -103,25 +81,7 @@ module.exports = function (app) {
                     url: data.Location,
                 }
 
-                // db.User.findOne({
-                //     where: {
-                //         username: newProject.oName,
-                //     }
-                // }).then(function (dbUser) {
-                //     let projects = dbUser.pNames;
-                //     console.log("\n\n\n" + projects + "\n\n\n");
-                //     if (projects === "null" || projects === null)
-                //         projects = newProject.title + ",";
-                //     else
-                //         projects += newProject.title + ",";
 
-                //     db.User.update(
-                //         { pNames: projects },
-                //         { returning: true, where: { username: newProject.oName } }
-                //     ).then(function (data) {
-                //         console.log(data);
-                //     });
-                // })
 
                 db.Project.create(newProject).then(function (dbProject) {
                     res.json(dbProject);
