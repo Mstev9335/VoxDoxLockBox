@@ -20,5 +20,5 @@ This is an application that allows a user to input an audio file that is stored 
 * express-fileupload npm package to get information on the file that is being uploaded
 
 ### Deployed on Heroku
-http://github.com - automatic!
-[GitHub](http://github.com)
+
+[VoxDoxLockBox](https://voxdoxlockbox.herokuapp.com/)
