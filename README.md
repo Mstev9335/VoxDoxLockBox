@@ -16,6 +16,8 @@ This is an application that allows a user to input an audio file that is stored 
 * Amazon S3 cloud storage
 * Mysql database
 * Sequelize
+* Heroku
+* JawsDb
 * aws-sdk npm package to access the Amazon S3 storage
 * express-fileupload npm package to get information on the file that is being uploaded
 
