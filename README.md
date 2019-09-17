@@ -21,5 +21,12 @@ This is an application that allows a user to input an audio file that is stored 
 * aws-sdk npm package to access the Amazon S3 storage
 * express-fileupload npm package to get information on the file that is being uploaded
 
+### Main page
+![start](/assets/images/vox1.png)
+
+### Upload page
+![upload](/assets/images/vox2.png)
+
+
 ### Deployed on Heroku: [VoxDoxLockBox](https://voxdoxlockbox.herokuapp.com/)
 
